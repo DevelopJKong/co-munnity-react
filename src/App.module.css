@@ -1,0 +1,12 @@
+:root {
+  --mainColor-red : #d63031;
+  --mainColor-blue : #0984e3;
+}
+
+.title {
+  color:var(--mainColor-red);
+}
+
+.colorBlue {
+  color:var(--mainColor-blue);
+}
