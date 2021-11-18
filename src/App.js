@@ -1,12 +1,18 @@
 // src/App.js
-import youtubeData from './data/youtubeData.json';
+import Layout from './components/shared/Layout';
+import React, { useState } from 'react';
 
 function App() {
-
-  console.log('youtubeData : ', youtubeData);
-  console.log('youtubeData[data]', youtubeData['data']);
-  console.log('youtubeData[data][0]', youtubeData['data'][0]);
-  return <div>리액트로 데이터 불러오기</div>;
+  const [number, setNumber] = useState(0); 
+  function plus() {
+    setNumber(number + 1);
+}
+  return (
+    <Layout>
+      <div><button onClick={plus}>True?</button></div>
+      {number % 2 === 0 && <div>True!</div>}
+    </Layout>
+  );
 }
 
 export default App;
