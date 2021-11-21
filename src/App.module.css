@@ -1,0 +1,24 @@
+:root {
+  --mainColor-red : #d63031;
+  --mainColor-blue : #0984e3;
+}
+
+.colorRed {
+  color:white;
+  background:var(--mainColor-red);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:250px;
+  height:250px;
+}
+
+.colorBlue {
+  color:white;
+  background:var(--mainColor-blue);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:250px;
+  height:250px;
+}
