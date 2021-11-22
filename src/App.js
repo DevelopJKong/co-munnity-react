@@ -1,18 +1,21 @@
 // src/App.js
+import { Route ,Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Explore from './pages/Explore';
+import Subscription from './pages/Subscription';
 import Layout from './components/shared/Layout';
-import styles from "./App.module.css";
-import React, { useState } from 'react';
 
 function App() {
-  const [number, setNumber] = useState(0); 
-  function plus() {
-    setNumber(number + 1);
-}
   return (
-    <Layout>
-      <div><button onClick={plus}>True?</button></div>
-      {number % 2 === 0 ? <div className={styles.colorRed}>True!</div> : <div className={styles.colorBlue}>False!</div>}
-    </Layout>
+    <div>
+      <Layout>
+      <Routes>
+        <Route path="/" element={<Home />}  />
+        <Route path="/Explore" element={<Explore />}/>
+        <Route path="/subscription" element={<Subscription />} />
+      </Routes>
+      </Layout>
+    </div>
   );
 }
 
