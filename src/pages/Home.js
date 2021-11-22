@@ -1,12 +1,13 @@
-// src/pages/Home.js
+// src/pages/Subscription.js
 import Layout from '../components/shared/Layout';
 
 function Home() {
-  return (
-    <Layout>
-      <div>* 홈</div>
-    </Layout>
-  );
-}
+    return (
+      <Layout>
+        <div>*홈</div>
+      </Layout>
+    );
+  }
 
-export default Home;
+  export default Home;
+  

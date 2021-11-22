@@ -14,6 +14,9 @@ function Menu() {
       <div>
         <Link to="/subscription">구독</Link>
       </div>
+      <div>
+        <Link to="/homework">과제</Link>
+      </div>
     </div>
   );
 }
