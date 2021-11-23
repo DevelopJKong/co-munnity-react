@@ -4,7 +4,7 @@ import Layout from '../components/shared/Layout';
 function Explore() {
   return (
     <Layout>
-      <div>* 탐색</div>
+      <div>🎉Explore</div>
     </Layout>
   );
 }
