@@ -1,9 +1,9 @@
 // src/pages/Explore.js
-import Layout from '../components/shared/Layout';
+import Layout from "../components/shared/Layout";
 
 function Explore() {
   return (
-    <Layout>
+    <Layout activeMenu="explore">
       <div>* 탐색</div>
     </Layout>
   );

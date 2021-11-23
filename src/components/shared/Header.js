@@ -1,14 +1,15 @@
 // src/components/shared/Header.js
 import styles from "./Header.module.css";
 
-function Header() {
+function Header({showMenu}) {
+
   return (
     <div className={styles.header}>
       <div className={styles.rowFrist}>
-        <i class="fas fa-bars"></i>
+        <i className="fas fa-bars" onClick={showMenu}></i>
       </div>
       <div className={styles.rowSecond}>
-        <i class="fab fa-youtube"></i>
+        <i className="fab fa-youtube"></i>
         <span>Youtube</span>
         <form method="GET">
           <input type="text" placeholder="Search Video" name="search" />
@@ -16,8 +17,8 @@ function Header() {
         </form>
       </div>
       <div className={styles.rowThird}>
-        <i class="fas fa-braille"></i>
-        <i class="fas fa-ellipsis-v"></i>
+        <i className="fas fa-braille"></i>
+        <i className="fas fa-ellipsis-v"></i>
       </div>
     </div>
   );

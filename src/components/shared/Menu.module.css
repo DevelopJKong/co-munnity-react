@@ -3,7 +3,24 @@ a {
     color:black;
 }
 
-.list {
-    margin:10% 0;
- 
+.menu {
+  position: fixed;
+  width: 240px;
+  top: 70px;
+  padding: 12px 12px 12px 0;
+  box-sizing: border-box;
 }
+
+.link {
+    display: flex;
+    height: 40px;
+    padding: 0 24px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    align-items: center;
+  }
+  .link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }

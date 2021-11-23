@@ -9,7 +9,7 @@ function Homework() {
   }
   
   return (
-    <Layout>
+    <Layout activeMenu="homework">
       <div className={styles.mainLayout}> 
         {number % 2 === 0 ? <div className={styles.colorRed}>True!</div> : <div className={styles.colorBlue}>False!</div>}
         <div><button onClick={plus}>True?</button></div>
