@@ -5,17 +5,17 @@ import styles from "./Menu.module.css";
 function Menu() {
   return (
     <div className={styles.menu}>
-      <div>
-        <Link to="/">홈</Link>
+      <div className={styles.list}>
+        <Link to="/"><i class="fas fa-home"></i>Home</Link>
       </div>
-      <div>
-        <Link to="/explore">탐색</Link>
+      <div className={styles.list}>
+        <Link to="/explore"><i class="far fa-compass"></i>Explore</Link>
       </div>
-      <div>
-        <Link to="/subscription">구독</Link>
+      <div className={styles.list}>
+        <Link to="/subscription"><i class="fas fa-book"></i>Subscription</Link>
       </div>
-      <div>
-        <Link to="/homework">과제</Link>
+      <div className={styles.list}>
+        <Link to="/homework"><i class="fas fa-pencil-alt"></i>Assignment</Link>
       </div>
     </div>
   );
