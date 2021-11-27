@@ -8,13 +8,19 @@
   bottom: 0;
   overflow: overlay;
   flex-direction: column;
-  
+
 }
 .layout {
   display: flex;
   flex: 1;
+
 }
 .contents {
   margin-left: 240px;
   flex: 1;
 }
+
+.closed {
+  flex: 1;
+}
+

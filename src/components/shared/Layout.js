@@ -6,19 +6,16 @@ import React, {useState} from 'react';
 
 
 function Layout({ children, activeMenu }) {
-  const [check, isMenu] = useState(0);
-  function checkMenu() {
-      if(check === true) {
-        isMenu(false);
-      } else {
-        isMenu(true);
-      }
+  const [check, isMenu] = useState(true);
+  function showMenu() {
+    console.log(check);
+    isMenu(!check);
   }
   return (
     <div className={styles.container}>
-      <Header showMenu={checkMenu}/>
+      <Header showMenu={showMenu}/>
       <div className={styles.layout}>
-        {check === true ? <Menu activeMenu={activeMenu} showMenu={checkMenu}/>: <div/>}
+        <Menu activeMenu={activeMenu} check={check}/>
         <div className={styles.contents}>{children}</div>
       </div>
     </div>

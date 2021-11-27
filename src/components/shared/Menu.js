@@ -2,8 +2,10 @@
 import { Link } from "react-router-dom";
 import styles from "./Menu.module.css";
 
-function Menu({activeMenu}) {
-  console.log('현재 활성화된 메뉴 : ', activeMenu);
+function Menu({activeMenu,check}) {
+  console.log(check,activeMenu);
+
+  if(!check){
   return (
     <div className={styles.menu}>
       <div className={styles.link}>
@@ -19,7 +21,9 @@ function Menu({activeMenu}) {
         <Link to="/homework"><i className="fas fa-pencil-alt"></i>Assignment</Link>
       </div>
     </div>
-  );
+  );}else{
+    return <div></div> ;
+  }
 }
 
 export default Menu;

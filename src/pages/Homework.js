@@ -2,6 +2,7 @@
 import Layout from "../components/shared/Layout";
 import React, { useState } from "react";
 import styles from "../App.module.css";
+import ContentsLayout from '../components/shared/ContentsLayout';
 function Homework() {
   const [number, setNumber] = useState(0);
   function plus() {
@@ -10,10 +11,10 @@ function Homework() {
   
   return (
     <Layout activeMenu="homework">
-      <div className={styles.mainLayout}> 
+     <ContentsLayout> <div className={styles.mainLayout}> 
         {number % 2 === 0 ? <div className={styles.colorRed}>True!</div> : <div className={styles.colorBlue}>False!</div>}
         <div><button onClick={plus}>True?</button></div>
-      </div>
+      </div></ContentsLayout>
     </Layout>
   );
 }
