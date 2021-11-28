@@ -1,24 +1,42 @@
-// src/pages/Subscription.js
+import styles from './Home.module.css';
 import Layout from '../components/shared/Layout';
-import ContentsLayout from '../components/shared/ContentsLayout';
+import youtubeData from '../data/youtubeData.json';
+import HomeFilter from '../components/home/HomeFilter';
+import HomeCard from '../components/home/HomeCard';
+import { useState } from 'react';
+
+const target = ['전체', 'Music', 'Entertainment', 'Comedy'];
 
 function Home() {
+  const [filter, setFilter] = useState('전체');
+
+  function mapFunc(data, index) {
     return (
-      <Layout activeMenu="home">
-         <ContentsLayout>  컨텐츠컨텐츠컨텐츠 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis
-        sed nisi vel tincidunt. Aenean nisl augue, tincidunt sed consequat vel,
-        bibendum non mi. Integer ullamcorper vestibulum ullamcorper. Ut vehicula
-        cursus pellentesque. Ut eleifend arcu sit amet neque consequat interdum.
-        Phasellus tempor libero neque, ac interdum augue dapibus at. Nulla
-        porttitor porta nisi non imperdiet. Nullam posuere pretium nulla
-        ultricies tincidunt.Ut ultrices massa ac sem semper, vel venenatis lorem
-        dignissim. Donec malesuada dignissim magna, at condimentum mi dictum
-        quis. Proin quis elementum nulla, id blandit ante. Aliquam erat
-        volutpat. Fusce vitae aliquam quam. Maecenas non maximus justo, eu
-        maximus est. Phasellus luctus mi eget cursus auctor. Nam in erat justo.</ContentsLayout> 
-      </Layout>
+      <HomeFilter
+        filter={filter}
+        text={data}
+        onClickFilter={function () {
+          setFilter(data);
+        }}
+        key={`home-filter-${index}`}
+      />
     );
   }
 
-  export default Home;
-  
+  function filterFunc(data) {
+    if (filter === '전체' || data.category === filter) return true;
+    return false;
+  }
+  return (
+    <Layout activeMenu="home">
+      <div className={styles.header}>{target.map(mapFunc)}</div>
+      <div className={styles.container}>
+        <div className={styles.grid}>
+          {youtubeData['data'].filter(filterFunc).map(HomeCard)}
+        </div>
+      </div>
+    </Layout>
+  );
+}
+
+export default Home;

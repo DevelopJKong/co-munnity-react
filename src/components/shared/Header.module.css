@@ -1,11 +1,13 @@
 .header {
-    width:100%;
+    width:99%;
     height:10%;
     display:flex;
     align-items: center;
     justify-content: space-around;
     border-bottom: 1px solid rgba(0,0,0,0.15);
     min-height:100px;
+    z-index:100;
+    background: white;
 }
 .rowFrist{
     width:20%;

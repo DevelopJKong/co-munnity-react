@@ -4,6 +4,7 @@
   top: 100px;
   padding: 12px 12px 12px 0;
   box-sizing: border-box;
+  z-index: 101;
 
 }
 .link {

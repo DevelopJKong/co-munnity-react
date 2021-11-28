@@ -16,10 +16,11 @@ function Layout({ children, activeMenu }) {
       <Header showMenu={showMenu}/>
       <div className={styles.layout}>
         <Menu activeMenu={activeMenu} check={check}/>
-        <div className={styles.contents}>{children}</div>
+        <div className={check ? styles.contents :styles.closed}>{children}</div>
       </div>
     </div>
   );
 }
 
 export default Layout; 
+

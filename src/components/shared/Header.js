@@ -2,7 +2,10 @@
 import styles from "./Header.module.css";
 
 function Header({showMenu}) {
-
+  const value = window.location.search.split('=').map( value => {
+    return value;
+  });
+    console.log(value[1]);
   return (
     <div className={styles.header}>
       <div className={styles.rowFrist}>
