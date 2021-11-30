@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/co-munnity-react/static/css/main.cd545cb2.chunk.css",
+    "main.js": "/co-munnity-react/static/js/main.a32baeff.chunk.js",
+    "main.js.map": "/co-munnity-react/static/js/main.a32baeff.chunk.js.map",
+    "runtime-main.js": "/co-munnity-react/static/js/runtime-main.ed3e8d26.js",
+    "runtime-main.js.map": "/co-munnity-react/static/js/runtime-main.ed3e8d26.js.map",
+    "static/js/2.62b780a0.chunk.js": "/co-munnity-react/static/js/2.62b780a0.chunk.js",
+    "static/js/2.62b780a0.chunk.js.map": "/co-munnity-react/static/js/2.62b780a0.chunk.js.map",
+    "index.html": "/co-munnity-react/index.html",
+    "static/css/main.cd545cb2.chunk.css.map": "/co-munnity-react/static/css/main.cd545cb2.chunk.css.map",
+    "static/js/2.62b780a0.chunk.js.LICENSE.txt": "/co-munnity-react/static/js/2.62b780a0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed3e8d26.js",
+    "static/js/2.62b780a0.chunk.js",
+    "static/css/main.cd545cb2.chunk.css",
+    "static/js/main.a32baeff.chunk.js"
+  ]
+}
